@@ -1,0 +1,56 @@
+html, body {
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+}
+
+.imgHeader {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    margin: 0;
+    transition: background-color 0.4s ease-out;
+  }
+  
+  
+  nav .navbar-right {
+     float: right;
+     display: block;
+     padding-right: 20px;
+     text-decoration: none;
+     font-size: 18px;
+  }
+  
+  nav .navbar-left {
+    float: left;
+    display: block;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    color: lightgray;
+  }
+  
+  footer {
+      padding-top: 600px;
+  }
+
+  section {
+      padding-top: 20px;
+  }

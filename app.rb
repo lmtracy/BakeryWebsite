@@ -1,31 +1,41 @@
 require "sinatra"
 require "sendgrid-ruby"
-
+require "pp"
 include SendGrid
 
 
-from = Email.new(email:'lauren.m.tracy@gmail.com')
-to = Email.new(email:'lauren.m.tracy@gmail.com')
-
 get '/' do
-    erb :form
+    erb :index
 end
 
-post '/form' do
+get '/cookies' do
+    erb :cookies
+end
 
-    subject = '1UP Bakery Catalog'
-    content = Content.new(type: 'text', value: params[:comment])
+get '/cupcakes' do
+    erb :cupcakes
+end
+
+get '/cakepops' do
+    erb :cakepops
+end
+
+
+post '/form' do
+    from = Email.new(email:'lauren.m.tracy@gmail.com')
+    to = Email.new(email: params[:email])
+    subject = 'Ready Baker One'
+    content = Content.new(type: 'text', value: 'Browse our selection')
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    # puts response.status_code
-    # puts response.body
-    # puts response.headers
+    pp response
 
-    redirect"/thanks"
+
+    redirect "/"
+
 end
 
 get '/thanks' do
-    "Thank you for your participation"
+    
 end
