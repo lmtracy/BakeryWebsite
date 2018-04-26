@@ -9,21 +9,44 @@ html, body {
     margin-right: auto;
 }
 
+#products {
+    font-size: 40px;
+    padding: 20px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    top: 100px;
+}
+
+.griditems {
+    flex: 1;
+    width: 300px;
+}
+
 a {
     text-decoration: none;
+    color: black; 
+}
+
+li {
+    list-style: none;
+    font-size: 16px;
 }
 
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 40px;
+    height: 60px;
     width: 100%;
-    background-color: transparent;
     box-sizing: border-box;
     padding: 12px 18px;
     margin: 0;
-    transition: background-color 0.4s ease-out;
   }
   
   
@@ -48,7 +71,8 @@ nav {
   }
   
   footer {
-      padding-top: 600px;
+      padding-top: 300px;
+      background-color: lightgray;
   }
 
   section {
