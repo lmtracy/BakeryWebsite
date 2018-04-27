@@ -1,4 +1,5 @@
-html, body {
+
+body {
     font-family: 'Tajawal', sans-serif;
     text-align: center;
 }
@@ -16,30 +17,40 @@ html, body {
     align-items: center;
     justify-content: center;
     align-items: center;
+    top: 50px;
 }
 
-.grid {
-    display: flex;
+.container {
+    display: grid;
     top: 100px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 450px;
+    justify-content: center;
 }
 
-.griditems {
-    flex: 1;
-    width: 300px;
+.griditem {
+    width: 90%;
+    height: 90%;
+}
+
+.main-griditem {
+    width: 350px;
 }
 
 a {
     text-decoration: none;
-    color: black; 
+    color: #317b8e; 
 }
 
-li {
-    list-style: none;
+a:hover {
+    color: lightgray;
+}
+
+p {
     font-size: 16px;
 }
 
 nav {
-    position: fixed;
     top: 0;
     left: 0;
     height: 60px;
@@ -49,13 +60,12 @@ nav {
     margin: 0;
   }
   
-  
   nav .navbar-right {
      float: right;
      display: block;
      padding-right: 20px;
      text-decoration: none;
-     font-size: 18px;
+     font-size: 22px;
   }
   
   nav .navbar-left {
@@ -63,18 +73,17 @@ nav {
     display: block;
     padding-right: 20px;
     text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav a:hover {
-    color: lightgray;
-  }
-  
-  footer {
-      padding-top: 300px;
-      background-color: lightgray;
   }
 
-  section {
-      padding-top: 20px;
-  }
+.imgNav {
+    width: 200px;
+}
+  
+footer {
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
