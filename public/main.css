@@ -2,6 +2,7 @@
 body {
     font-family: 'Tajawal', sans-serif;
     text-align: center;
+    margin: 0;
 }
 
 .imgHeader {
@@ -18,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     top: 50px;
+    min-height: 500px;
 }
 
 .container {

@@ -29,16 +29,16 @@ post '/form' do
     value: '<img src="https://flic.kr/p/26vRfD5"><p><strong>Ready Baker One: Geek Baked Goodies for Sale!</strong>
     <p>Cookies:</p>
     <br>Doctor Who: Lady Cassandra Cookies - $3.50
-    <br>Lord of the Rings: Lembas Bread Cookies - $5.00/2pk
-    <br>Harry Potter Cookies - $2.50
+    <br>Lord of the Rings Cookies - $5.00/2pk
+    <br>Aliens Cookies - $2.50
     <p>Cupcakes:</p>
-    <br>Avengers Cupcakes - $5.00
-    <br>The Last Airbender Cupcakes - $5.00
-    <br>Battlestar Galactica Cupcakes - $5.00
+    <br>Marvel Cupcakes - $5.00
+    <br>Harry Potter Cupcakes - $5.00
+    <br>Star Trek Cupcakes - $5.00
     <p>CakePops:</p>
     <br>Super Mario Pop - $2.50
-    <br>Pokemon Pokeball Pop - $2.50
-    <br>Star Wars Death Star Pop - $2.50
+    <br>Totoro Pop - $2.50
+    <br>Star Wars Pop - $2.50
     ')
     mail = Mail.new(from, subject, to, content)
     sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
